@@ -35,3 +35,12 @@ body {
       height: 11em;
     }
   }
+/* Footer de las cards del Slider; eliminar borde inferior */
+ .card-footer {
+    border: none;
+  }
+  
+  /* .bg-light {
+    background-color: #abe6ab; 
+    color: #ffffff; 
+} */
