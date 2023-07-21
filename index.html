@@ -8,14 +8,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/searchBar.css">
+  <link rel="stylesheet" href="css/navbar.css">
 </head>
-s
-
 <body>
   <!--Empieza el Navbar-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-    <div class="container">
+    <div class="container" id="containerNavbar">
       <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="102" height="32"
           viewBox="0 0 102 32" data-testid="header-hero-logo">
           <path class="Logo_default_svg__logo-svg-path"
@@ -37,19 +38,102 @@ s
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!--Aqui empieza la lista del navBar-->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+              Favoritos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MXN
+            </a>
+            <ul class="dropdown-menu" id="dropdownL">
+              <b>Principales monedas</b>
+              <li><a class="dropdown-item" href="#">EUR - Euro</a></li>
+              <li><a class="dropdown-item" href="#">GPB - Libra esterlina</a></li>
+              <li><a class="dropdown-item" href="#">USD - Dólar EE.UU.</a></li>
+              <b>Todas las monedas</b>
+              <!--Lista de trivago de las monedas-->
+              <li><a class="dropdown-item" href="#">AED - Dírham de los EAU</a></li>
+              <li><a class="dropdown-item" href="#">ARS - Peso argentino</a></li>
+              <li><a class="dropdown-item" href="#">AUD - Dólar australiano</a></li>
+              <li><a class="dropdown-item" href="#">AZN - Manat azerbaiyano</a></li>
+              <li><a class="dropdown-item" href="#">BGN - Lev búlgaro</a></li>
+              <li><a class="dropdown-item" href="#">BHD - Dinar bareiní</a></li>
+              <li><a class="dropdown-item" href="#">BRL - Real brasileño</a></li>
+              <li><a class="dropdown-item" href="#">CAD - Dólar canadiense</a></li>
+              <li><a class="dropdown-item" href="#">CHF - Franco suizo</a></li>
+              <li><a class="dropdown-item" href="#">CLP - Peso chileno</a></li>
+              <li><a class="dropdown-item" href="#">CNY - Yuan chino</a></li>
+              <li><a class="dropdown-item" href="#">COP - Peso colombiano</a></li>
+              <li><a class="dropdown-item" href="#">CZK - Corona checa</a></li>
+              <li><a class="dropdown-item" href="#">DKK - Corona danesa</a></li>
+              <li><a class="dropdown-item" href="#">DZD - Dinar argelino</a></li>
+              <li><a class="dropdown-item" href="#">EGP - Libra egipcia</a></li>
+              <li><a class="dropdown-item" href="#">EUR - Euro</a></li>
+              <li><a class="dropdown-item" href="#">GBP - Libra esterlina</a></li>
+              <li><a class="dropdown-item" href="#">HKD - Dólar de Hong Kong</a></li>
+              <li><a class="dropdown-item" href="#">HRK - Kuna croata</a></li>
+              <li><a class="dropdown-item" href="#">HUF - Florín húngaro</a></li>
+              <li><a class="dropdown-item" href="#">IDR - Rupia indonesia</a></li>
+              <li><a class="dropdown-item" href="#">ILS - Shequel israelí</a></li>
+              <li><a class="dropdown-item" href="#">INR - Rupia india</a></li>
+              <li><a class="dropdown-item" href="#">JOD - Dinar jordano</a></li>
+              <li><a class="dropdown-item" href="#">JPY - Yen japonés</a></li>
+              <li><a class="dropdown-item" href="#">KRW - Won surcoreano</a></li>
+              <li><a class="dropdown-item" href="#">KWD - Dinar kuwaití</a></li>
+              <li><a class="dropdown-item" href="#">KZT - Tenge kazajo</a></li>
+              <li><a class="dropdown-item" href="#">LBP - Libra libanesa</a></li>
+              <li><a class="dropdown-item" href="#">MAD - Dírham marroquí</a></li>
+              <li><a class="dropdown-item" href="#">MDL - Leu moldavo</a></li>
+              <li><a class="dropdown-item" href="#">MXN - Peso mexicano</a></li>
+              <li><a class="dropdown-item" href="#">MYR - Ringgit malayo</a></li>
+              <li><a class="dropdown-item" href="#">NGN - Naira nigeriano</a></li>
+              <li><a class="dropdown-item" href="#">NOK - Corona noruega</a></li>
+              <li><a class="dropdown-item" href="#">NZD - Dólar neozelandés</a></li>
+              <li><a class="dropdown-item" href="#">OMR - Rial omaní</a></li>
+              <li><a class="dropdown-item" href="#">PEN - Nuevo sol peruano</a></li>
+              <li><a class="dropdown-item" href="#">PHP - Peso filipino</a></li>
+              <li><a class="dropdown-item" href="#">PLN - Zloty polaco</a></li>
+              <li><a class="dropdown-item" href="#">QAR - Riyal qatarí</a></li>
+              <li><a class="dropdown-item" href="#">RON - Leu rumano</a></li>
+              <li><a class="dropdown-item" href="#">RSD - Dinar serbio</a></li>
+              <li><a class="dropdown-item" href="#">RUB - Rublo ruso</a></li>
+              <li><a class="dropdown-item" href="#">SAR - Riyal saudí</a></li>
+              <li><a class="dropdown-item" href="#">SEK - Corona sueca</a></li>
+              <li><a class="dropdown-item" href="#">SGD - Dólar singapurense</a></li>
+              <li><a class="dropdown-item" href="#">THB - Baht tailandés</a></li>
+              <li><a class="dropdown-item" href="#">TND - Dinar tunecino</a></li>
+              <li><a class="dropdown-item" href="#">TRY - Lira turca</a></li>
+              <li><a class="dropdown-item" href="#">TWD - Dólar taiwanés</a></li>
+              <li><a class="dropdown-item" href="#">UAH - Grivna ucraniana</a></li>
+              <li><a class="dropdown-item" href="#">USD - Dólar EE. UU.</a></li>
+              <li><a class="dropdown-item" href="#">UYU - Peso uruguayo</a></li>
+              <li><a class="dropdown-item" href="#">VND - Dong vietnamita</a></li>
+              <li><a class="dropdown-item" href="#">ZAR - Rand sudafricano</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="pointer-events-none max-h-full max-w-full"><path d="M15.88 12.15a5 5 0 10-7.76 0A6.49 6.49 0 003 18.5 2.5 2.5 0 005.5 21h13a2.5 2.5 0 002.5-2.5 6.49 6.49 0 00-5.12-6.35zM8 9a4 4 0 111.37 3A4 4 0 018 9zm10.5 11h-13A1.5 1.5 0 014 18.5 5.51 5.51 0 019 13a5 5 0 006 0 5.51 5.51 0 015 5.48A1.5 1.5 0 0118.5 20z" fill="currentColor">
+              </path></svg>
+              Iniciar seción</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="pointer-events-none max-h-full max-w-full"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round">
+              </path></svg>
+              Menú
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" id="menu1">Vistos recientemente</a></li>
+              <li><a class="dropdown-item" href="#" id="menu2">Ayuda y soporte</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -58,7 +142,80 @@ s
   <!--Termina el Navbar-->
   <div class="container">
     <!--Aquí empieza el searchBar-->
-
+    <div class="container-fluid shadow rounded searchBar">
+      <div class="row rounded h-100 searchBarElements">
+        <form action="" class="col-3 rounded">
+          <div class="row">
+            <div class="col-2 iconSearch">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+                    <path d="M10 3a7 7 0 107 7 7 7 0 00-7-7zM21 21l-6-6" vector-effect="non-scaling-stroke"></path>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <span class="row col-8 p-0 searchBarElementsInputs">
+              <label for="" class="titleBoxSearch">Destino</label>
+              <input type="text" name="" id="" class="searchBarElementsInput" placeholder="¿A dónde irás?">
+            </span>
+            <button class="col-2 btnSearch">
+              <span aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+                    <path vector-effect="non-scaling-stroke" d="M7 7l10 10M17 7L7 17"></path>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </form>
+        <fieldset class="col-4 schedule">
+          <button class="w-50 rounded btn">
+            <span class="row">
+              <span class="col-2 pt-2" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path d="M12 12.71V17h1v-6h-.71l-1.83 1.83.71.71.83-.83z"></path>
+                    <path d="M19 5h-1a1 1 0 00-2 0H8a1 1 0 00-2 0H5a2 2 0 00-2 2v11a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2zm1 13a1 1 0 01-1 1H5a1 1 0 01-1-1V9h16zm0-10H4V7a1 1 0 011-1h14a1 1 0 011 1z"></path>
+                  </g>
+                </svg>
+              </span>
+              <span class="col-10">
+                <div class="col">
+                <span class="titleBoxSearch" >Llegada</span>
+                <span class="searchBarElementsInput">Lu, 28/08/23</span>
+                </div>
+              </span>
+            </span>
+          </button>
+          <button class="rounded btn">
+            <span class="row">
+                <span class="titleBoxSearch w-50" >Salida</span>
+                <span class="searchBarElementsInput">Ma, 29/08/23</span>
+            </span>
+          </button>
+        </fieldset>
+        <button class="col-3 btn guests">
+          <span class="row">
+            <span class="col-2 pt-2" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="pointer-events-none max-h-full max-w-full">
+                <path d="M21 12a3.1 3.1 0 00-1-2.31V6a1 1 0 00-1-1H5a1 1 0 00-1 1v3.69A3.1 3.1 0 003 12a1 1 0 00-1 1v4a2 2 0 002 2h16a2 2 0 002-2v-4a1 1 0 00-1-1zm-7.76-1a1.72 1.72 0 011.51-1h3.5a1.5 1.5 0 01.75.2 1.87 1.87 0 01.91 1.21A1.87 1.87 0 0120 12h-7a2.2 2.2 0 01.24-1zM5 6h14v3.12a2.36 2.36 0 00-.75-.12h-3.5a2.78 2.78 0 00-2.59 2 3.27 3.27 0 00-.16 1 3.27 3.27 0 00-.16-1 2.78 2.78 0 00-2.59-2h-3.5a2.36 2.36 0 00-.75.12zm-.91 5.41A1.87 1.87 0 015 10.2a1.5 1.5 0 01.75-.2h3.5a1.72 1.72 0 011.51 1 2.2 2.2 0 01.24 1H4a1.87 1.87 0 01.09-.59zM21 17a1 1 0 01-1 1H4a1 1 0 01-1-1v-4h18z" fill="currentColor"></path>
+              </svg>
+            </span>
+            <span class="col-10">
+              <div class="col">
+              <span class="titleBoxSearch" >Huéspedes y habs</span>
+              <span class="searchBarElementsInput">2 huéspedes, 1 habitacion</span>
+              </div>
+            </span>
+          </span>
+        </button>
+        <button class="col-2 search btn btn-primary h-100">
+          Buscar
+        </button>
+      </div>
+    </div>
     <!--Aquí termina el searchBar-->
   </div>
   <!--Aqui empieza el FilterBar-->
@@ -159,18 +316,125 @@ s
 
     <!--Aqui empieza el DetailsBar-->
 
+    <div class="container mt-4">
+      <div class="row d-flex align-self-center">
+        <div class="col col-lg-1 text-center align-self-center">
+          <p class="text-start fw-bold align-self-center">Ordena por </p>
+        </div>
+        <div class="col col-lg-3 align-self-center">
+          <select class="form-select form-select-sm p-3 border border-secondary-subtle rounded-start-4"
+            aria-label=".form-select-sm example">
+            <option selected>Recomendados</option>
+            <option value="1">Solo precio</option>
+            <option value="2">Puntuación y recomendados</option>
+            <option value="3">Solo Puntuación</option>
+          </select>
+        </div>
+        <div class="col-lg-1 align-self-center justify-content-">
+          <div aria-describedby="payment-ranking-button" class="leading-none"><span
+              class="inline-flex leading-none Icon_sIcon__5F7YL transform mt-1"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" class="pointer-events-none max-h-full max-w-full">
+                <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-miterlimit="10"></circle>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                  d="M12 11v6" vector-effect="non-scaling-stroke"></path>
+                <circle cx="12" cy="7" r="1" fill="currentColor"></circle>
+              </svg></span></div>
+        </div>
+        <div class="col text-end">
+          <p>Hospedajes encontrados: 1000+</p>
+          <p>Sitios comprados 222</p>
+        </div>
+        <div class="col position-relative">
+          <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 rounded-5">
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+            <script>(function () {
+                var setting = { "query": "Ciudad de México, CDMX, México", "width": 300, "height": 50, "satellite": false, "zoom": 12, "placeId": "ChIJB3UJ2yYAzoURQeheJnYQBlQ", "cid": "0x54061076265ee841", "coords": [19.4326077, -99.133208], "lang": "es", "queryString": "Ciudad de México, CDMX, México", "centerCoord": [19.4326077, -99.133208], "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "968311" };
+                var d = document;
+                var s = d.createElement('script');
+                s.src = 'https://1map.com/js/script-for-user.js?embed_id=968311';
+                s.async = true;
+                s.onload = function (e) {
+                  window.OneMap.initMap(setting)
+                };
+                var to = d.getElementsByTagName('script')[0];
+                to.parentNode.insertBefore(s, to);
+              })();</script><a href="https://1map.com/es/map-embed">1 Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--Aqui termina el DetailsBar-->
 
     <!--Aqui empieza el HotelDetails-->
+    <div class="card mb-3">
+        <div class="row">
+          <div class="col-4">
+            <img src="src/hotel1.webp" class="card-img" width="200" height="200">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title">Pueblo Bonito Mazatlan All Inlcusive
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+              </h5>
+              <p class="card-text" id="rating">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                Resort</p>
+              <p class="card-text"> a 0.1 km de la playa</p>
+              <p class="card-text"><small class="text-muted"><b>Excelente</b>  (2815 opiniones)</small></p>
+            </div>
+          </div>  
+        </div>
+    </div>
+  
 
     <!--Aqui termina el HotelDetails-->
 
     <!--Aqui empieza el MoreSeccion-->
 
+
+
+    <div class="text-center p-4 m-5">
+      <button type="button" class="btn btn-secondary">Más</button>
+    </div>
+    <div class="alert alert-light shadow p-3 mb-5 bg-body-tertiary rounded" role="alert">
+      <p>Los precios y la disponibilidad que recibimos de los sitios de reservaciones cambian constantemente. Esto
+        significa que a veces puede haber una diferencia entre la oferta que viste en trivago y y la del sitio de
+        reservaciones</p>
+    </div>
     <!--Aqui termina el MoreSeccion-->
 
   </div>
   <div class="container">
+    <!--Aqui empieza el MoreSeccion-->
+    <p class="fs-2 fw-bolder py-4">Hoteles en Mazatlán</p>
+    <p class="fw-normal">Encuentra hoteles baratos e increibles en Mazatlán, México. Busca y compara los precios de
+      ofertas
+      de hospedaje y encutra tarifas muy bajas en trivago.</p>
+    <ul>
+      <li>Busca entre todos los hoteles de Mazatlán</li>
+      <li>¡Encuentra tu hotel ideal en Mazatlán!</li>
+      <li>¡Reserva al precio ideal!</li>
+    </ul>
+    <!--Aqui termina el MoreSeccion-->
+
     <!--Aqui empieza el Slider-->
     <!-- Slider primera sección -->
     <div class="container">
@@ -508,91 +772,178 @@ s
     <!--Aqui termina el Slider-->
 
     <!--Aqui empieza los links-->
+    <p class="fs-2 fw-bolder py-3">Hoteles en Mazatlán</p>
+    <p class="fw-normal">También te pueden interesar estos hoteles...</p>
+    <div class="row align-items-center">
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Don Pelayo Pacific Beach</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Holiday Inn Resort Mazatlan</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Gaviana Resort</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Costa de Oro Beach</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Oceano Palace Beach Hotel</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Park Royal Mazatlán</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Playa Mazatlan Beach Hotel</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Olas Altas Inn Hotel & Spa</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Las Flores Beach Resort</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">El Cid Castilla Beach Hotel</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hotel Holiday Inn Sunspree Resort</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Coral Island Hotel & Spa</a></p>
+      </div>
+    </div>
 
-    <!--Aqui termina los links-->
+    <p class="fs-2 fw-bolder py-3">Barrios - Mazatlán</p>
+    <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hoteles en Zona Dorada</a></p>
 
+    <p class="fs-2 fw-bolder py-3">Puntos de Interés - Mazatlán</p>
+    <div class="row align-items-center">
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Aeropuesto Internacional de Mazatlán</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">International Motorcycle Week</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Mazatlan Carnival</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Central de Autobuses de Mazatlán</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Isla de las Piedras</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Mazatlán International Center</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Foro de Mazatlán</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Isla de Venados</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Playa Brujas</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Festival of Light</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Malecon</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Plaza Machado</a></p>
+      </div>
 
-  </div>
-
-  <!--Empieza el Footer-->
-  <div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
+      <p class="fs-2 fw-bolder py-3">Destinos Destacados</p>
+      <div class="row align-items-center">
+        <div class="col">
+          <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hoteles en Escuinapa</a></p>
+        </div>
+        <div class="col">
+          <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hoteles en Elota</a></p>
+        </div>
+        <div class="col">
+          <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hoteles en Concordia</a></p>
+        </div>
+        <div class="col">
+          <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Hoteles en San Ignacio</a></p>
         </div>
 
+        <p class="fs-2 fw-bolder py-3">Más Destinos Destacados</p>
+    <div class="row align-items-center">
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Mazatlán, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Guasave, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Navolato, Sinaloa Hoteles</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Culiacan, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Mocorito, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Sinaloa, Sinaloa Hoteles</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Los Mochis, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Cosalá, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Acapulco de Juárez, Guerrero Hoteles</a></p>
+      </div>
+      <div class="col">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">El Fuerte, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Guamuchil, Sinaloa Hoteles</a></p>
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-opacity-75-hover" href="#">Cancún, Quintana Roo Hoteles</a></p>
+      </div>
+        <!--Aqui termina los links-->
 
 
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
+      </div>
 
-
-
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-
-
-
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
+      <!--Empieza el Footer-->
+      <div class="container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
             </div>
-          </form>
-        </div>
+
+
+
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+
+
+
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+
+
+
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2022 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#twitter"></use>
+                  </svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#instagram"></use>
+                  </svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#facebook"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </footer>
       </div>
+      <!--Termina el Footer-->
 
-
-
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>© 2022 Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                <use xlink:href="#twitter"></use>
-              </svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                <use xlink:href="#instagram"></use>
-              </svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                <use xlink:href="#facebook"></use>
-              </svg></a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-  <!--Termina el Footer-->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
