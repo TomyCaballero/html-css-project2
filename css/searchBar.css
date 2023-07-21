@@ -1,0 +1,50 @@
+form{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 5px 5px 5px;
+    background: white;
+}
+
+.iconSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBarElements{
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchBarElementsInputs{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.titleBoxSearch{
+    --tw-text-opacity: 1;
+    color: rgba(108,112,122,var(--tw-text-opacity));
+    line-height: 1.25;
+    font-size: 12px;
+}
+.searchBarElementsInput{
+    font-size: 13px;
+    font-weight: 600;
+    border: 0;
+    width:85%;
+    padding: 2px 0px 0px 0px;
+}
+.btnSearch{
+   background: white;
+    border: none;
+}
+
+.searchBar{
+   height: 60px; 
+}
+.col span{
+    display: flex;
+}
