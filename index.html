@@ -7,12 +7,12 @@
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/searchBar.css">
   <link rel="stylesheet" href="css/navbar.css">
 </head>
-
 <body>
   <!--Empieza el Navbar-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
@@ -217,11 +217,101 @@
       </div>
     </div>
     <!--Aquí termina el searchBar-->
-
-    <!--Aqui empieza el FilterBar-->
-
-    <!--Aqui termina el fITERbAR-->
   </div>
+  <!--Aqui empieza el FilterBar-->
+  <div class="container">
+    <div class="row d-flex justify-content-md-around">
+
+      <!--Aqué inicia la sección 1 del FilterBar-->
+      <!-- Dropdown presupuesto -->
+      <div class="col-md-4">
+        <p>Define el presupuesto: Por noche</p>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-between"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 90%;">
+            $0 - $9,400
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Aqui acaba la sección 1 y comienza la sección 2 del FilterBar-->
+      <div class="col-md-8">
+        <div class="container">
+          <div class="row d-flex justify-content-md-around">
+            <!--Radio Tipo de hospedaje-->
+            <div class="col-md-5">
+              <p>Tipo de hospedaje</p>
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="width: 95%;">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Todos</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">Hotel</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio3">Departamento/casa</label>
+              </div>
+            </div>
+            <!--Dropdown Puntuación-->
+            <div class="col-md-2">
+              <p>Puntuación</p>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-between"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 95%;">
+                  Todo
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--Dropdownb Ubicación-->
+            <div class="col-md-2">
+              <p>Ubicación</p>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle text-truncate " type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" style="width: 95%;">
+                  Centro de hospedaje cerca de...
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--Dropdowm Más filtros-->
+            <div class="col-md-2">
+              <p>Más filtros</p>
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle  d-flex align-items-center justify-content-between text-truncate"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 95%;">
+                  Elegir
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--Aqui finaliza la sección 2 del FilterBar-->
+
+    </div>
+  </div>
+  <!--Aqui termina el fITERbAR-->
   <div class="container">
 
     <!--Aqui empieza el DetailsBar-->
@@ -346,7 +436,339 @@
     <!--Aqui termina el MoreSeccion-->
 
     <!--Aqui empieza el Slider-->
+    <!-- Slider primera sección -->
+    <div class="container">
 
+      <h4>De los hoteles mejor calificados en Mazatlán</h4>
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Park Royal Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Park Royal Mazatlan</h5>
+                  <p class="card-text"> <i class="fa-sharp fa-solid fa-star fa-sm" style="color: #fc9e15;"></i>
+                    <i class="fa-sharp fa-solid fa-star fa-sm" style="color: #fc9e15;"></i>
+                    <i class="fa-sharp fa-solid fa-star fa-sm" style="color: #fc9e15;"></i> Hotel
+                  </p>
+                  <p>7.3 <small>(141 opiniones)</small></p>
+                  <div class="bg-light p-3">
+                    <p>Sitio del hotel</p>
+                    <div class="d-flex justify-content-between">
+                      <p>$,1278</p>
+                        <a href="#" class="btn btn-primary">Ver oferta</a>
+                    </div>
+                    <br>
+                  </div>
+                  <div class="card-footer text-truncate" style="width: 110%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Varali Grand Hotel.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Varali Grand Hotel</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Don Pelayo Pacific Beach.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Don Pelayo Pacific Beach</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Doubletree By Hilton Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Doubletree By Hilton Mazatlan</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Mision Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mision Mazatlan</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/El Cid El Moro Beach Hotel.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">El Cid El Moro Beach Hotel</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Hotel Costa de Oro Beach.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Costa de Oro Beach</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Margaritas.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Margaritas</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Marena Suites.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Marena Suites</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Venados Inn.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Venados Inn</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+    <!-- Slider segunda sección -->
+    <div class="container">
+
+      <h4>Rango de precios</h4>
+      <p>Hoteles en Mazatlán - Precio máximo de <strong>$645</strong> hasta <strong>$4,620</strong> (Precio por noche)
+      </p>
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Park Royal Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Varali Grand Hotel.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Don Pelayo Pacific Beach.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Doubletree By Hilton Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Mision Mazatlan.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/El Cid El Moro Beach Hotel.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cards-wrapper">
+              <div class="card">
+                <img src="./src/Hotel Costa de Oro Beach.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Margaritas.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Marena Suites.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+              <div class="card d-none d-md-block">
+                <img src="./src/Venados Inn.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Ver oferta</a>
+                  <br><br>
+                  <div class="card-footer text-truncate" style="width: 100%;">
+                    Nuestro precio más bajo: <strong>$1,281</strong> Sitio del hottel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
     <!--Aqui termina el Slider-->
 
     <!--Aqui empieza los links-->
